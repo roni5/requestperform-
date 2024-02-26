@@ -1,0 +1,7 @@
+
+describe('Homepage', () => {
+  it('renders homepage', () => {
+    render(<Home />); 
+    expect(screen.getByRole('heading')).toHaveText('Welcome to my app!');
+  })
+})

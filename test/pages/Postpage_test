@@ -1,0 +1,13 @@
+
+describe('Post Page', () => {
+
+  it('fetches post data', async () => {
+    const postId = '123';
+    render(<PostPage params={{id: postId}} />);
+    
+    const postTitle = await screen.findByRole('heading');
+
+    expect(postTitle).toHaveText('Post 123 title'); 
+  })
+
+})
